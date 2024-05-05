@@ -1,0 +1,153 @@
+.chat-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__header-wrapper {
+    display: flex;
+    padding: 10px 20px;
+    background-color: rgb(202, 202, 202);
+    column-gap: 10px;
+  }
+
+  &__image-wrapper {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: rgb(170, 155, 135);
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+
+  &__header {
+    font-family: "Roboto", sans-serif;
+    font-size: 26px;
+    line-height: 24px;
+  }
+
+  &__date {
+    align-self: center;
+    width: fit-content;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: rgba(194, 194, 194, 0.33);
+    padding: 2px 5px;
+    color: #5a5a5a;
+  }
+
+  &__conversation {
+    background-color: rgb(238, 238, 238);
+    height: 100%;
+    overflow-y: auto; // This enables scrolling on Y-axis
+    // scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 10px 10px 10px;
+
+    &::-webkit-scrollbar-track {
+      background: transparent; /* Track background */
+    }
+
+    /* Styles the scrollbar thumb (the draggable part) */
+    &::-webkit-scrollbar-thumb {
+      background: #888; /* Thumb background */
+    }
+
+    /* Styles the scrollbar thumb on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; /* Darker background on hover */
+    }
+
+    /* Sets the width of the scrollbar */
+    &::-webkit-scrollbar {
+      width: 5px; /* Width of the scrollbar */
+    }
+
+    .message-mine {
+      background-color: rgb(140, 177, 119);
+      align-self: flex-end;
+      padding: 8px 50px 10px 8px;
+      max-width: 70%;
+      border-radius: 15px 15px 0 15px;
+      position: relative;
+    }
+
+    .message {
+      background-color: rgb(255, 255, 255);
+      align-self: flex-start;
+      padding: 8px 50px 8px 10px;
+      max-width: 70%;
+      border-radius: 0 15px 15px 15px;
+      flex-grow: 0;
+      position: relative;
+    }
+
+    .message__text {
+      display: inline;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400px;
+      color: #292929;
+      flex-grow: 0;
+    }
+
+    .message__date {
+      font-family: "Roboto", sans-serif;
+      font-size: 12px;
+      position: absolute;
+      right: 8px;
+      bottom: 3px;
+      color: #5a5a5a;
+    }
+  }
+
+  &__input-wrapper {
+    padding: 0 5px 10px;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+  }
+
+  &__input {
+    padding: 6px 15px !important;
+    resize: none;
+    height: 36px;
+    border-radius: 15px 0 0 15px !important;
+    font-size: 16px !important;
+
+    &::-webkit-scrollbar-track {
+      background: transparent; /* Track background */
+    }
+
+    /* Styles the scrollbar thumb (the draggable part) */
+    &::-webkit-scrollbar-thumb {
+      background: #888; /* Thumb background */
+    }
+
+    /* Styles the scrollbar thumb on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; /* Darker background on hover */
+    }
+
+    /* Sets the width of the scrollbar */
+    &::-webkit-scrollbar {
+      width: 5px; /* Width of the scrollbar */
+    }
+  }
+
+  &__button {
+    border: none;
+    padding: 2px 10px 0 6px;
+    border-radius: 0 15px 15px 0;
+    background-color: rgb(111, 163, 223);
+    font-family: "Roboto", sans-serif;
+  }
+}

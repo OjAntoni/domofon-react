@@ -1,0 +1,100 @@
+.chats-wrapper {
+  background-color: rgb(224, 224, 224);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .chat-list {
+    max-height: 100%; // Set this to whatever you want
+    overflow-y: auto; // This enables scrolling on Y-axis
+    scroll-behavior: smooth;
+
+    /* Styles the scrollbar track */
+    &::-webkit-scrollbar-track {
+      background: transparent; /* Track background */
+    }
+
+    /* Styles the scrollbar thumb (the draggable part) */
+    &::-webkit-scrollbar-thumb {
+      background: #888; /* Thumb background */
+    }
+
+    /* Styles the scrollbar thumb on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; /* Darker background on hover */
+    }
+
+    /* Sets the width of the scrollbar */
+    &::-webkit-scrollbar {
+      width: 5px; /* Width of the scrollbar */
+    }
+  }
+
+  .chat {
+    padding: 5px 15px;
+    display: flex;
+    column-gap: 20px;
+    transition: all 0.1s linear;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(216, 216, 216);
+    }
+
+    &-selected {
+      background-color: rgb(212, 212, 212);
+    }
+
+    &__icon {
+      width: 60px;
+      height: 60px;
+      background-color: rgb(191, 165, 133);
+      border-radius: 50%;
+      flex-shrink: 0;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .message-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__name {
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 18px;
+    }
+
+    &__last-message {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 16px;
+      color: rgb(59, 59, 59);
+      display: flex;
+      justify-content: space-between;
+      column-gap: 5px;
+
+      .last-message__text {
+        padding-bottom: 5px;
+        flex-grow: 1;
+        min-width: 0;
+        width: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

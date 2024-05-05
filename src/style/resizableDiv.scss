@@ -1,0 +1,22 @@
+.resizable {
+  display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   background-color: #f0f0f0;
+  //   border: 1px solid #000;
+  //   min-width: 520px;
+  //   height: 200px; /* Just for visibility */
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  //   padding: 10px;
+}
+
+.resizer {
+  width: 4px;
+  height: 100%;
+  cursor: ew-resize;
+  background-color: #797979;
+}
